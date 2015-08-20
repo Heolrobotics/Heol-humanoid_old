@@ -1,0 +1,5 @@
+[submodule "Hardware/lower_limbs"]
+	path = Hardware/lower_limbs
+	url = https://github.com/Fendiproject/Fendi-lower_limbs.git
+	branch = master
+
