@@ -1,5 +1,15 @@
-[submodule "Hardware/lower_limbs"]
-	path = Hardware/lower_limbs
-	url = https://github.com/Fendiproject/Fendi-lower_limbs.git
-	branch = master
-
+[submodule "Hardware/Fendi-upper_limbs"]
+	path = Hardware/Fendi-upper_limbs
+	url = https://github.com/Fendiproject/Fendi-upper_limbs
+[submodule "Hardware/Fendi-lower_limbs"]
+	path = Hardware/Fendi-lower_limbs
+	url = https://github.com/Fendiproject/Fendi-lower_limbs
+[submodule "Hardware/Fendi-torso"]
+	path = Hardware/Fendi-torso
+	url = https://github.com/Fendiproject/Fendi-torso
+[submodule "Hardware/Fendi-components"]
+	path = Hardware/Fendi-components
+	url = https://github.com/Fendiproject/Fendi-components
+[submodule "Hardware/Fendi-head"]
+	path = Hardware/Fendi-head
+	url = https://github.com/Fendiproject/Fendi-head
