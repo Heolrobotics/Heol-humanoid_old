@@ -1,0 +1,6 @@
+<package>
+  <description brief="Fendi_humanoid">Fendi_humanoid</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

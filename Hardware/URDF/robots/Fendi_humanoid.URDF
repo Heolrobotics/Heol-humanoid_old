@@ -1,0 +1,1262 @@
+<robot
+  name="Fendi_humanoid">
+  <link
+    name="pelvis">
+    <inertial>
+      <origin
+        xyz="0.0410669745819321 -0.0379110717402652 0.0421828125034158"
+        rpy="0 0 0" />
+      <mass
+        value="0.0572942260553945" />
+      <inertia
+        ixx="3.65121025707978E-05"
+        ixy="2.9900783694598E-07"
+        ixz="4.85882286230638E-07"
+        iyy="2.12489482613664E-05"
+        iyz="-3.35587468839814E-06"
+        izz="2.000430429396E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/pelvis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/pelvis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_hip">
+    <inertial>
+      <origin
+        xyz="-0.0270835640140282 0.0231158477663268 0.0237291455019634"
+        rpy="0 0 0" />
+      <mass
+        value="0.0238887563110607" />
+      <inertia
+        ixx="5.49518226158328E-06"
+        ixy="6.8290703807493E-07"
+        ixz="-1.00493628454709E-06"
+        iyy="4.44318183140713E-06"
+        iyz="-4.3109955469561E-07"
+        izz="6.2772843076379E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_y"
+    type="revolute">
+    <origin
+      xyz="0.0416518518525676 -0.0188002160308141 0.0267433423130832"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="l_hip" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="l_hip_motor">
+    <inertial>
+      <origin
+        xyz="-6.01409748791065E-05 -0.00776762181170506 -0.00281391609679076"
+        rpy="0 0 0" />
+      <mass
+        value="0.0191896773969032" />
+      <inertia
+        ixx="2.72857317938081E-06"
+        ixy="-1.41373715165931E-08"
+        ixz="1.36917622383183E-09"
+        iyy="1.92531751945142E-06"
+        iyz="-8.27044796155279E-08"
+        izz="2.84890029696111E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_hip_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_hip_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_motor_z"
+    type="revolute">
+    <origin
+      xyz="-0.0319999999999984 0.03 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_hip" />
+    <child
+      link="l_hip_motor" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="l_thigh">
+    <inertial>
+      <origin
+        xyz="-8.92757280601675E-09 -0.0335554544923508 -5.61776243110483E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0205479194607194" />
+      <inertia
+        ixx="5.39136068968386E-06"
+        ixy="-2.47620945227249E-12"
+        ixz="-1.88429695992604E-11"
+        iyy="2.40527919108636E-06"
+        iyz="1.83766538429752E-08"
+        izz="4.40731135554231E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_thigh_x"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.00400000000000341"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="l_hip_motor" />
+    <child
+      link="l_thigh" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="l_knee">
+    <inertial>
+      <origin
+        xyz="-1.07050958375599E-10 0.0225000000000239 6.77062572673748E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00513087567995406" />
+      <inertia
+        ixx="2.59601739840765E-06"
+        ixy="2.71910445336982E-19"
+        ixz="-2.24165387751632E-19"
+        iyy="1.53262832182676E-06"
+        iyz="-1.57621864056051E-21"
+        izz="1.34541992010939E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_knee_x"
+    type="continuous">
+    <origin
+      xyz="0 -0.0449999999999764 0"
+      rpy="-3.14159265358979 0 0" />
+    <parent
+      link="l_thigh" />
+    <child
+      link="l_knee" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_ankle">
+    <inertial>
+      <origin
+        xyz="0.0124831744421505 0.00877126170541725 -0.000110062280334439"
+        rpy="0 0 0" />
+      <mass
+        value="0.0401544687611881" />
+      <inertia
+        ixx="6.22341129865557E-06"
+        ixy="1.13806252097559E-07"
+        ixz="-3.6295522775002E-08"
+        iyy="1.1354072686787E-05"
+        iyz="2.17409044982689E-08"
+        izz="1.39792054648314E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_ankle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_ankle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_ankle_x"
+    type="revolute">
+    <origin
+      xyz="0 0.0450000000000011 0"
+      rpy="3.46944695195361E-16 0 3.14159265358979" />
+    <parent
+      link="l_knee" />
+    <child
+      link="l_ankle" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_foot">
+    <inertial>
+      <origin
+        xyz="-0.00642333988990459 0.0209235049680599 3.33167952695276E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0202605378538181" />
+      <inertia
+        ixx="3.14268429568419E-06"
+        ixy="3.92584853218248E-07"
+        ixz="-3.79765019585263E-09"
+        iyy="1.48123918460857E-05"
+        iyz="4.33508550121308E-10"
+        izz="1.35313300236987E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_foot_y"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.000199999999993367"
+      rpy="2.94902990916057E-15 0 3.14159265358979" />
+    <parent
+      link="l_ankle" />
+    <child
+      link="l_foot" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r_hip">
+    <inertial>
+      <origin
+        xyz="0.0267918410324553 0.0384453640375394 0.0237344523826482"
+        rpy="0 0 0" />
+      <mass
+        value="0.0247517363559943" />
+      <inertia
+        ixx="7.94295695056937E-06"
+        ixy="2.1425049431127E-06"
+        ixz="1.03734145559542E-06"
+        iyy="4.5972428305968E-06"
+        iyz="8.17998732601026E-07"
+        izz="8.74766806042518E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hipy"
+    type="revolute">
+    <origin
+      xyz="0.0416518518525676 -0.0188002160308141 0.00374334231308317"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="r_hip" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="r_hip_motor">
+    <inertial>
+      <origin
+        xyz="-6.01409748823556E-05 -0.00776762181170462 -0.00281391609678699"
+        rpy="0 0 0" />
+      <mass
+        value="0.0191896773969032" />
+      <inertia
+        ixx="2.72857317938081E-06"
+        ixy="-1.4137371516593E-08"
+        ixz="1.36917622383048E-09"
+        iyy="1.92531751945142E-06"
+        iyz="-8.27044796155279E-08"
+        izz="2.84890029696111E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_hip_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_hip_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_motor_z"
+    type="revolute">
+    <origin
+      xyz="0.0319999970253307 0.053 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_hip" />
+    <child
+      link="r_hip_motor" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_thigh">
+    <inertial>
+      <origin
+        xyz="-8.92757523462961E-09 -0.0335554544923748 -5.61776243046541E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0205479194607194" />
+      <inertia
+        ixx="5.39136068968386E-06"
+        ixy="-2.47620920001816E-12"
+        ixz="-1.88429697745238E-11"
+        iyy="2.40527919108636E-06"
+        iyz="1.83766538429764E-08"
+        izz="4.4073113555423E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_thigh_x"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.00399999999999812"
+      rpy="1.5707963267949 0 1.57079632679491" />
+    <parent
+      link="r_hip_motor" />
+    <child
+      link="r_thigh" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_knee">
+    <inertial>
+      <origin
+        xyz="-1.07040286356774E-10 -0.0225000000000002 -3.7470027081099E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00513087567995406" />
+      <inertia
+        ixx="2.59601739840765E-06"
+        ixy="-1.79489971205421E-19"
+        ixz="-5.58025164073407E-22"
+        iyy="1.53262832182676E-06"
+        iyz="-2.36102670529451E-21"
+        izz="1.34541992010939E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_knee.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_knee.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_knee_x"
+    type="revolute">
+    <origin
+      xyz="0 -0.0450000000000016 0"
+      rpy="1.38777878078145E-15 1.38777878078145E-15 1.34815096107107E-29" />
+    <parent
+      link="r_thigh" />
+    <child
+      link="r_knee" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_ankle">
+    <inertial>
+      <origin
+        xyz="0.0124831744421376 0.00877126170544446 -0.000110062280338594"
+        rpy="0 0 0" />
+      <mass
+        value="0.0401544687611881" />
+      <inertia
+        ixx="6.22341129865557E-06"
+        ixy="1.13806252097998E-07"
+        ixz="-3.62955227736177E-08"
+        iyy="1.1354072686787E-05"
+        iyz="2.1740904498283E-08"
+        izz="1.39792054648314E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_ankle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_ankle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_ankle_x"
+    type="revolute">
+    <origin
+      xyz="0 -0.0450000000000004 0"
+      rpy="-3.14159265358979 1.38777878078145E-15 3.14159265358979" />
+    <parent
+      link="r_knee" />
+    <child
+      link="r_ankle" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r_foot">
+    <inertial>
+      <origin
+        xyz="-0.0064233398899067 0.020923504968057 3.33167952701469E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0202605378538181" />
+      <inertia
+        ixx="3.14268429568439E-06"
+        ixy="3.92584853219291E-07"
+        ixz="-3.79765019771603E-09"
+        iyy="1.48123918460858E-05"
+        iyz="4.33508550050295E-10"
+        izz="1.35313300236987E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_foot_y"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.000199999999999714"
+      rpy="1.38777878078145E-15 8.32667268468867E-15 3.14159265358979" />
+    <parent
+      link="r_ankle" />
+    <child
+      link="r_foot" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="spine">
+    <inertial>
+      <origin
+        xyz="-2.90372371746436E-05 0.014751453992939 0.00718055086354136"
+        rpy="0 0 0" />
+      <mass
+        value="0.0236192598262426" />
+      <inertia
+        ixx="4.62186731283777E-06"
+        ixy="-3.67948960481309E-10"
+        ixz="1.93443312804237E-08"
+        iyy="4.35953212647662E-06"
+        iyz="-3.88430201433733E-08"
+        izz="2.68872368909863E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/spine.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/spine.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="spine_z"
+    type="revolute">
+    <origin
+      xyz="0.0416518518525676 -0.0728002160308141 0.0587433423130832"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="spine" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="chest">
+    <inertial>
+      <origin
+        xyz="0.000252471454000917 -0.00852294522132094 0.0542243023374223"
+        rpy="0 0 0" />
+      <mass
+        value="0.0758588949423129" />
+      <inertia
+        ixx="2.56332767250059E-05"
+        ixy="7.18911942840476E-08"
+        ixz="-3.54664111742847E-08"
+        iyy="5.81073301842715E-05"
+        iyz="-1.67290555589558E-06"
+        izz="4.66499678939429E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/chest.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/chest.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="chest_x"
+    type="revolute">
+    <origin
+      xyz="0 0.0150000000000001 0"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="spine" />
+    <child
+      link="chest" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="l_shoulder">
+    <inertial>
+      <origin
+        xyz="0.00738135253741493 0.00997571314910811 -0.00170181429281047"
+        rpy="0 0 0" />
+      <mass
+        value="0.00334368326561231" />
+      <inertia
+        ixx="7.55281237044274E-07"
+        ixy="2.8731821621229E-15"
+        ixz="1.18138638921604E-09"
+        iyy="8.36222428966546E-07"
+        iyz="-2.90492257872544E-16"
+        izz="2.71216334384524E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_shoulder_x"
+    type="revolute">
+    <origin
+      xyz="-0.0436000000000003 -0.000150337590467807 0.0510000000000027"
+      rpy="1.57079632679489 -1.30000271246138E-29 3.14159265358979" />
+    <parent
+      link="chest" />
+    <child
+      link="l_shoulder" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l_shoulder_motor">
+    <inertial>
+      <origin
+        xyz="-1.23621078329077E-05 -0.0128830851144582 -0.00498956108290476"
+        rpy="0 0 0" />
+      <mass
+        value="0.03371809385647" />
+      <inertia
+        ixx="1.38412199467415E-05"
+        ixy="4.44238047376105E-09"
+        ixz="3.61149667125928E-09"
+        iyy="3.92279038815673E-06"
+        iyz="1.82027066683203E-06"
+        izz="1.23612082514476E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_shoulder_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_shoulder_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_shoulder_motor_y"
+    type="revolute">
+    <origin
+      xyz="0.0179999999999996 0 0"
+      rpy="0 -7.88860905221039E-31 0" />
+    <parent
+      link="l_shoulder" />
+    <child
+      link="l_shoulder_motor" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="l_upper_arm">
+    <inertial>
+      <origin
+        xyz="-0.0025899919948604 4.39981186303035E-06 0.00172771878621637"
+        rpy="0 0 0" />
+      <mass
+        value="0.00334368326578746" />
+      <inertia
+        ixx="7.55284120272143E-07"
+        ixy="-2.87342029502278E-15"
+        ixz="2.87458880084905E-16"
+        iyy="8.36222428969735E-07"
+        iyz="-2.88095726463528E-16"
+        izz="2.71213451173539E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_upper_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_upper_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_upper_arm_z"
+    type="revolute">
+    <origin
+      xyz="0 -0.0539999999999975 0"
+      rpy="3.14159265358978 2.08166817117217E-15 -1.5707963267949" />
+    <parent
+      link="l_shoulder_motor" />
+    <child
+      link="l_upper_arm" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="l_forearm">
+    <inertial>
+      <origin
+        xyz="0.00275878256206167 -0.00985811408291166 -0.0015128527016696"
+        rpy="0 0 0" />
+      <mass
+        value="0.0257657351354794" />
+      <inertia
+        ixx="1.28753735465766E-05"
+        ixy="-2.09824525987839E-06"
+        ixz="-4.15371891487317E-08"
+        iyy="2.7091001183806E-06"
+        iyz="-4.05301232335937E-08"
+        izz="1.28181627224906E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/l_forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_forearm_y"
+    type="revolute">
+    <origin
+      xyz="0.0179999999999999 0 0"
+      rpy="3.14159265358977 1.11022302462516E-14 -1.5707963267949" />
+    <parent
+      link="l_upper_arm" />
+    <child
+      link="l_forearm" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_shoulder">
+    <inertial>
+      <origin
+        xyz="0.00747429714567514 -0.00997549115208965 -0.00172772500615242"
+        rpy="0 0 0" />
+      <mass
+        value="0.00334368326561427" />
+      <inertia
+        ixx="7.55284120264198E-07"
+        ixy="2.87395891905956E-15"
+        ixz="2.39292795073825E-15"
+        iyy="8.36222428966727E-07"
+        iyz="-2.92727530068632E-16"
+        izz="2.71213451164958E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_shoulder_x"
+    type="revolute">
+    <origin
+      xyz="0.0439112930179202 0.000107167499561404 0.0510002215817856"
+      rpy="-1.5707963267949 -1.69346344342082E-18 0.00244054044922089" />
+    <parent
+      link="chest" />
+    <child
+      link="r_shoulder" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="r_shoulder_motor">
+    <inertial>
+      <origin
+        xyz="-1.40487807498424E-09 -0.0128833066962265 -0.004989577078733"
+        rpy="0 0 0" />
+      <mass
+        value="0.0337180938564699" />
+      <inertia
+        ixx="1.38412287593949E-05"
+        ixy="-7.25387722603124E-14"
+        ixz="-5.6041581103614E-13"
+        iyy="3.92279038815671E-06"
+        iyz="1.82027608765078E-06"
+        izz="1.2361199438794E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_shoulder_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_shoulder_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_shoulder_motor_y"
+    type="revolute">
+    <origin
+      xyz="0.0180885762087062 0 0"
+      rpy="-9.86076131526265E-32 4.33680868994203E-19 3.14159265358979" />
+    <parent
+      link="r_shoulder" />
+    <child
+      link="r_shoulder_motor" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="r_upper_arm">
+    <inertial>
+      <origin
+        xyz="-0.00258977041308801 4.21636149137983E-06 0.0017277199190545"
+        rpy="0 0 0" />
+      <mass
+        value="0.00334368326578747" />
+      <inertia
+        ixx="7.55284120272146E-07"
+        ixy="-2.87342748679109E-15"
+        ixz="2.87448467173245E-16"
+        iyy="8.36222428969737E-07"
+        iyz="-2.8810130555489E-16"
+        izz="2.7121345117354E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_upper_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_upper_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_upper_arm_z"
+    type="revolute">
+    <origin
+      xyz="0 -0.0539999999999969 0"
+      rpy="-3.13915211314058 6.9388732390668E-16 -1.5707963267949" />
+    <parent
+      link="r_shoulder_motor" />
+    <child
+      link="r_upper_arm" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="r_forearm">
+    <inertial>
+      <origin
+        xyz="-0.00276742190180321 -0.00985840898574784 -0.00151302551139534"
+        rpy="0 0 0" />
+      <mass
+        value="0.0257657889801188" />
+      <inertia
+        ixx="1.28754577391738E-05"
+        ixy="2.09826471210789E-06"
+        ixz="4.15636504949165E-08"
+        iyy="2.70910882509485E-06"
+        iyz="-4.03467501905181E-08"
+        izz="1.28182439095506E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/r_forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_forearm_y"
+    type="revolute">
+    <origin
+      xyz="0.0180000000000033 0 0"
+      rpy="-3.14159265358979 2.08166817117217E-14 -1.5707963267949" />
+    <parent
+      link="r_upper_arm" />
+    <child
+      link="r_forearm" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="head">
+    <inertial>
+      <origin
+        xyz="-2.76686094433098E-06 0.0382668849714797 0.00655496087036832"
+        rpy="0 0 0" />
+      <mass
+        value="0.0229562091454423" />
+      <inertia
+        ixx="1.90554495558622E-05"
+        ixy="-5.76349039056202E-10"
+        ixz="9.25663495523869E-11"
+        iyy="1.78140887309938E-05"
+        iyz="1.63893877728857E-06"
+        izz="1.77445479284289E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/head.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Fendi_humanoid/meshes/head.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_z"
+    type="revolute">
+    <origin
+      xyz="0.00020516550046587 -0.00211629613324466 0.0760159797629514"
+      rpy="1.59665875812253 6.47649529920312E-05 -6.311126761483E-05" />
+    <parent
+      link="chest" />
+    <child
+      link="head" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
