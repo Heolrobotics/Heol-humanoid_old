@@ -1,0 +1,287 @@
+{
+  "controllers": {
+    "USB2AX": {
+      "sync_read": true,
+      "protocol": 2,
+      "attached_motors": [
+        "torso",
+        "arm_l",
+        "arm_r",
+        "leg_l",
+        "leg_r"
+      ],
+      "port": "auto"
+    }
+  },
+  "motorgroups": {
+    "torso": [
+      "m11",
+      "m12",
+      "m13"
+    ],
+
+    "leg_r": [
+      "m51",
+      "m52",
+      "m53",
+      "m54",
+      "m55",
+      "m56"
+    ],
+
+    "leg_l": [
+      "m41",
+      "m42",
+      "m43",
+      "m44",
+      "m45",
+      "m46"
+    ],
+
+    "arm_r": [
+      "m21",
+      "m22",
+      "m23",
+      "m24"
+    ],
+    "arm_l": [
+      "m31",
+      "m32",
+      "m33",
+      "m34"
+    ]
+  },
+
+  "motors": {
+    "m11": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 11,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m12": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 12,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m13": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 13,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m21": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 21,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m22": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 22,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m23": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 23,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m24": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 24,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m31": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 31,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m32": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 32,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m33": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 33,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m34": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 34,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m51": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 51,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m52": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 52,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m53": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 53,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m54": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 54,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m55": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 55,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m56": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 56,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m41": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 41,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m42": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 42,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m43": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 43,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m44": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 44,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m45": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 45,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    },
+    "m46": {
+      "offset": 0,
+      "type": "XL-320",
+      "id": 46,
+      "angle_limit": [
+        -150,
+        150
+      ],
+      "orientation": "direct"
+    }
+  }
+}
