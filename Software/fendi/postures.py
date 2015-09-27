@@ -14,7 +14,7 @@ class StandPosture(SimplePosture):
 
 class Wave(Primitive):
     def setup(self):
-        for m in self.robot.arm_r:
+        for m in self.robot.r_arm:
             m.compliant = False
 
     def run(self):
