@@ -1,0 +1,15 @@
+[submodule "Heol-lower_limbs"]
+	path = Heol-lower_limbs
+	url = https://github.com/Heolrobotics/Heol-lower_limbs
+[submodule "Heol-torso"]
+	path = Heol-torso
+	url = https://github.com/Heolrobotics/Heol-torso
+[submodule "Heol-components"]
+	path = Heol-components
+	url = https://github.com/Heolrobotics/Heol-components
+[submodule "Heol-head"]
+	path = Heol-head
+	url = https://github.com/Heolrobotics/Heol-head
+[submodule "Heol-upper_limbs"]
+	path = Heol-upper_limbs
+	url = https://github.com/Heolrobotics/Heol-upper_limbs
