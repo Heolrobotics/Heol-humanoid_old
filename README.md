@@ -1,9 +1,9 @@
 
 ![Trunk Assembled](img/Fendi.jpg)
 
-## Fendi project
+## Heol
 
-Fendi project is an open source humanoid robot. It is fully 3D printed.
+Heol is an open source humanoid robot. It is fully 3D printed.
 
 
 
@@ -19,6 +19,6 @@ Fendi project is an open source humanoid robot. It is fully 3D printed.
 
 ### More on the project
 
-- [Website](http://www.fendi-project.com/)
-- [Facebook](https://www.facebook.com/pages/Fendi-project/423401127832644)
-- [Twitter](https://twitter.com/fendiproject)
+- [Website](http://www.heol.io)
+- [Facebook](https://www.facebook.com/Heolrobotics)
+- [Twitter](https://twitter.com/Heol_robotics)
