@@ -13,3 +13,6 @@
 [submodule "Hardware/Heol-lower_limbs"]
 	path = Hardware/Heol-lower_limbs
 	url = https://github.com/Heolrobotics/Heol-lower_limbs
+[submodule "Hardware/Electronics"]
+	path = Hardware/Electronics
+	url = https://github.com/Heolrobotics/Electronics
