@@ -6,7 +6,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find Fendi_humanoid)/robots/Fendi_humanoid.URDF" />
+    textfile="$(find Heol_humanoid)/robots/Heol_humanoid.URDF" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,5 +22,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find Fendi_humanoid)/urdf.rviz" />
+    args="-d $(find Heol_humanoid)/urdf.rviz" />
 </launch>
