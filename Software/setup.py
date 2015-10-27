@@ -9,8 +9,8 @@ extra = {}
 if sys.version_info >= (3,):
     extra['use_2to3'] = True
 
-setup(name='fendi',
-      version='0.1',
+setup(name='heol',
+      version='0.2',
       packages=find_packages(),
 
       install_requires=['pypot >= 2.8', 'poppy-creature'],
@@ -22,9 +22,9 @@ setup(name='fendi',
 
       zip_safe=False,
 
-      author='Alexandre Le Fahler',
+      author='Alexandre Le Fahler','Julien JEHL'
       author_email='???',
-      description=' Fendi Software Library',
+      description=' Heol Software Library',
       url='https://github.com/Fendiproject/Fendi-humanoid',
       license='GNU GENERAL PUBLIC LICENSE Version 3',
 

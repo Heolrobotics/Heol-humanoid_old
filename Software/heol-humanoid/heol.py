@@ -3,7 +3,7 @@ from poppy.creatures import AbstractPoppyCreature
 from .postures import StandPosture, Wave
 
 
-class Fendi(AbstractPoppyCreature):
+class Heol(AbstractPoppyCreature):
     @classmethod
     def setup(cls, robot):
         robot.attach_primitive(StandPosture(robot, 2.), 'stand')
