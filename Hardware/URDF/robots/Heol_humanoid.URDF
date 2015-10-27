@@ -22,9 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/pelvis.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/pelvis_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -36,9 +34,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/pelvis.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/pelvis_respondable.STL" /></geometry></collision>
   </link>
   <link
     name="l_hip">
@@ -62,9 +58,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_hip.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_hip_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -76,9 +70,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_hip.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_hip_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_hip_y"
@@ -95,8 +87,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_hip_motor">
@@ -120,9 +111,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_hip_motor.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_hip_motor_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -134,9 +123,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_hip_motor.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_hip_motor_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_hip_motor_z"
@@ -153,8 +140,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_thigh">
@@ -178,9 +164,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_thigh.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_thigh_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -192,9 +176,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_thigh.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_thigh_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_thigh_x"
@@ -211,8 +193,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_knee">
@@ -236,9 +217,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_knee.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_knee_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -250,9 +229,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_knee.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_knee_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_knee_x"
@@ -269,8 +246,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_ankle">
@@ -294,9 +270,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_ankle.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_ankle_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -308,9 +282,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_ankle.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_ankle_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_ankle_x"
@@ -327,8 +299,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_foot">
@@ -352,9 +323,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_foot.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_foot_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -366,9 +335,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_foot.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_foot_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_foot_y"
@@ -385,8 +352,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_hip">
@@ -410,9 +376,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_hip.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_hip_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -424,9 +388,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_hip.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_hip_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_hipy"
@@ -443,8 +405,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_hip_motor">
@@ -468,9 +429,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_hip_motor.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_hip_motor_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -482,9 +441,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_hip_motor.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_hip_motor_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_hip_motor_z"
@@ -501,8 +458,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_thigh">
@@ -526,9 +482,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_thigh.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_thigh_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -540,9 +494,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_thigh.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_thigh_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_thigh_x"
@@ -559,8 +511,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_knee">
@@ -584,9 +535,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_knee.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_knee_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -598,9 +547,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_knee.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_knee_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_knee_x"
@@ -617,8 +564,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_ankle">
@@ -642,9 +588,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_ankle.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_ankle_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -656,9 +600,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_ankle.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_ankle_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_ankle_x"
@@ -675,8 +617,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_foot">
@@ -700,9 +641,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_foot.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_foot_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -714,9 +653,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_foot.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_foot_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_foot_y"
@@ -733,8 +670,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="spine">
@@ -758,9 +694,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/spine.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/spine_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -772,9 +706,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/spine.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/spine_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="spine_z"
@@ -791,8 +723,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="chest">
@@ -816,9 +747,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/chest.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/chest_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -830,9 +759,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/chest.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/chest_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="chest_x"
@@ -849,8 +776,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_shoulder">
@@ -874,9 +800,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_shoulder_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -888,9 +812,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_shoulder_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_shoulder_x"
@@ -907,8 +829,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_shoulder_motor">
@@ -932,9 +853,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder_motor.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_shoulder_motor_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -946,9 +865,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder_motor.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_shoulder_motor_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_shoulder_motor_y"
@@ -965,8 +882,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_upper_arm">
@@ -990,9 +906,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_upper_arm.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_upper_arm_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -1004,9 +918,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_upper_arm.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_upper_arm_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_upper_arm_z"
@@ -1023,8 +935,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="l_forearm">
@@ -1048,9 +959,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_forearm.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/l_forearm_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -1062,9 +971,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/l_forearm.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/l_forearm_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="l_forearm_y"
@@ -1081,8 +988,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_shoulder">
@@ -1106,9 +1012,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_shoulder_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -1120,9 +1024,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_shoulder_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_shoulder_x"
@@ -1139,8 +1041,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_shoulder_motor">
@@ -1164,9 +1065,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder_motor.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_shoulder_motor_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -1178,9 +1077,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder_motor.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_shoulder_motor_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_shoulder_motor_y"
@@ -1197,8 +1094,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_upper_arm">
@@ -1222,9 +1118,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_upper_arm.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_upper_arm_visual.STL" /></geometry><material
         name="">
         <color
           rgba="1 1 1 1" />
@@ -1236,9 +1130,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_upper_arm.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_upper_arm_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_upper_arm_z"
@@ -1255,8 +1147,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="r_forearm">
@@ -1280,9 +1171,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_forearm.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/r_forearm_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -1294,9 +1183,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/r_forearm.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/r_forearm_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="r_forearm_y"
@@ -1313,8 +1200,7 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
   <link
     name="head">
@@ -1338,9 +1224,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/head.STL" />
-      </geometry>
-      <material
+          filename="package://meshes/head_visual.STL" /></geometry><material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -1352,9 +1236,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Heol_humanoid/meshes/head.STL" />
-      </geometry>
-    </collision>
+          filename="package://meshes/head_respondable.STL" /></geometry></collision>
   </link>
   <joint
     name="head_z"
@@ -1371,7 +1253,6 @@
     <limit
       lower="-2.6"
       upper="2.6"
-      effort="0"
-      velocity="0" />
+      effort="3.1" velocity="7.0" />
   </joint>
 </robot>

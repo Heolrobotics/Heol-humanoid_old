@@ -1,0 +1,88 @@
+<robot
+  name="Heol_humanoid">
+  <link
+    name="pelvis">
+    <inertial>
+      <origin
+        xyz="0.0410669745819321 -0.0379110717402652 0.0421828125034158"
+        rpy="0.7853981625 0 0" />
+      <mass
+        value="0.0572942260553945" />
+      <inertia
+        ixx="3.65121025707978E-05"
+        ixy="2.9900783694598E-07"
+        ixz="4.85882286230638E-07"
+        iyy="2.12489482613664E-05"
+        iyz="-3.35587468839814E-06"
+        izz="2.000430429396E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/pelvis_visual.STL" /></geometry><material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/pelvis_respondable.STL" /></geometry></collision>
+  </link>
+  <link
+    name="l_hip">
+    <inertial>
+      <origin
+        xyz="-0.0270835640140282 0.0231158477663268 0.0237291455019634"
+        rpy="0 0 0" />
+      <mass
+        value="0.0238887563110607" />
+      <inertia
+        ixx="5.49518226158328E-06"
+        ixy="6.8290703807493E-07"
+        ixz="-1.00493628454709E-06"
+        iyy="4.44318183140713E-06"
+        iyz="-4.3109955469561E-07"
+        izz="6.2772843076379E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/l_hip_visual.STL" /></geometry><material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/l_hip_respondable.STL" /></geometry></collision>
+  </link>
+  <joint
+    name="l_hip_y"
+    type="revolute"><limit lower="-2.617993875" upper="2.617993875" effort="3.1" velocity="7.0"></limit>
+    <origin
+      xyz="0.0416518518525676 -0.0188002160308141 0.0267433423130832"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="pelvis" />
+    <child
+      link="l_hip" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
