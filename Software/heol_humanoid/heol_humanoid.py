@@ -3,7 +3,7 @@ from poppy.creatures import AbstractPoppyCreature
 from .postures import StandPosture, Wave
 
 
-class Heol(AbstractPoppyCreature):
+class HeolHumanoid(AbstractPoppyCreature):
     @classmethod
     def setup(cls, robot):
         robot.attach_primitive(StandPosture(robot, 2.), 'stand')

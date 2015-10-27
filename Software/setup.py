@@ -9,7 +9,7 @@ extra = {}
 if sys.version_info >= (3,):
     extra['use_2to3'] = True
 
-setup(name='heol',
+setup(name='heol-humanoid',
       version='0.2',
       packages=find_packages(),
 
@@ -22,7 +22,7 @@ setup(name='heol',
 
       zip_safe=False,
 
-      author='Alexandre Le Fahler','Julien JEHL'
+      author='Alexandre Le Fahler, Julien JEHL',
       author_email='???',
       description=' Heol Software Library',
       url='https://github.com/Fendiproject/Fendi-humanoid',
