@@ -391,7 +391,7 @@
           filename="package://meshes/r_hip_respondable.STL" /></geometry></collision>
   </link>
   <joint
-    name="r_hipy"
+    name="r_hip_y"
     type="revolute">
     <origin
       xyz="0.041652 -0.0188 0.0037433"
