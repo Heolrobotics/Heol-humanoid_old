@@ -1,1 +1,0 @@
-from .fendi import Fendi

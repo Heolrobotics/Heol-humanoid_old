@@ -1,1377 +1,692 @@
-<robot
-  name="Heol_humanoid">
-  <link
-    name="pelvis">
-    <inertial>
-      <origin
-        xyz="0.0410669745819321 0.0421828125034158 0.0379110717402652"
-        rpy="0 0 0" />
-      <mass
-        value="0.0572942260553945" />
-      <inertia
-        ixx="3.65121025707978E-05"
-        ixy="4.85882286230639E-07"
-        ixz="-2.99007836945976E-07"
-        iyy="2.000430429396E-05"
-        iyz="3.35587468839815E-06"
-        izz="2.12489482613664E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/pelvis.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/pelvis.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <link
-    name="l_hip">
-    <inertial>
-      <origin
-        xyz="-0.0270835640140283 0.0231158477663268 0.0237291455019634"
-        rpy="0 0 0" />
-      <mass
-        value="0.0238887563110607" />
-      <inertia
-        ixx="5.49518226158328E-06"
-        ixy="6.82907038074933E-07"
-        ixz="-1.00493628454709E-06"
-        iyy="4.44318183140713E-06"
-        iyz="-4.3109955469561E-07"
-        izz="6.27728430763791E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_hip.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_hip.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_hip_y"
-    type="revolute">
-    <origin
-      xyz="0.041652 -0.0188 0.026743"
-      rpy="1.5708 0 0" />
-    <parent
-      link="pelvis" />
-    <child
-      link="l_hip" />
-    <axis
-      xyz="0 -1 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_hip_motor">
-    <inertial>
-      <origin
-        xyz="-6.01409748791082E-05 -0.00776762181170505 -0.00281391609679076"
-        rpy="0 0 0" />
-      <mass
-        value="0.0191896773969032" />
-      <inertia
-        ixx="2.72857317938081E-06"
-        ixy="-1.41373715165933E-08"
-        ixz="1.36917622383191E-09"
-        iyy="1.92531751945142E-06"
-        iyz="-8.27044796155283E-08"
-        izz="2.84890029696111E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_hip_motor.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_hip_motor.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_hip_motor_z"
-    type="revolute">
-    <origin
-      xyz="-0.032 0.03 0"
-      rpy="0 0 0" />
-    <parent
-      link="l_hip" />
-    <child
-      link="l_hip_motor" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_thigh">
-    <inertial>
-      <origin
-        xyz="-1.10293058644406E-08 -0.0335554626566368 -5.61829485263877E-05"
-        rpy="0 0 0" />
-      <mass
-        value="0.0205479105964943" />
-      <inertia
-        ixx="5.3913560500342E-06"
-        ixy="-3.27768647326821E-12"
-        ixz="-1.94132341304228E-11"
-        iyy="2.40527757418774E-06"
-        iyz="1.83746316311177E-08"
-        izz="4.40730797669897E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_thigh.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_thigh.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_thigh_x"
-    type="revolute">
-    <origin
-      xyz="0 0 -0.004"
-      rpy="1.5708 0 1.5708" />
-    <parent
-      link="l_hip_motor" />
-    <child
-      link="l_thigh" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_knee">
-    <inertial>
-      <origin
-        xyz="-1.07050902864447E-10 0.0225000000000239 6.78970768497322E-15"
-        rpy="0 0 0" />
-      <mass
-        value="0.00513087567995406" />
-      <inertia
-        ixx="2.59601739840765E-06"
-        ixy="2.7189963744047E-19"
-        ixz="-2.2454238776038E-19"
-        iyy="1.53262832182676E-06"
-        iyz="-1.85645753405888E-21"
-        izz="1.34541992010939E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_knee.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_knee.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_knee_x"
-    type="revolute">
-    <origin
-      xyz="0 -0.045 0"
-      rpy="-3.1416 0 0" />
-    <parent
-      link="l_thigh" />
-    <child
-      link="l_knee" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_ankle">
-    <inertial>
-      <origin
-        xyz="-0.0442601678709415 -0.0664285222637494 -0.00976191413290354"
-        rpy="0 0 0" />
-      <mass
-        value="0.040154468761188" />
-      <inertia
-        ixx="6.22341129865556E-06"
-        ixy="1.13806252097566E-07"
-        ixz="-3.62955227750007E-08"
-        iyy="1.1354072686787E-05"
-        iyz="2.17409044982703E-08"
-        izz="1.39792054648314E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_ankle.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_ankle.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_ankle_x"
-    type="revolute">
-    <origin
-      xyz="-0.056743 -0.0302 0.0096519"
-      rpy="3.4694E-16 0 3.1416" />
-    <parent
-      link="l_knee" />
-    <child
-      link="l_ankle" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_foot">
-    <inertial>
-      <origin
-        xyz="0.0385766601101179 0.0209235049680227 3.3316795277601E-05"
-        rpy="0 0 0" />
-      <mass
-        value="0.0202605378538181" />
-      <inertia
-        ixx="3.14268429568421E-06"
-        ixy="3.92584853218249E-07"
-        ixz="-3.79765019585808E-09"
-        iyy="1.48123918460857E-05"
-        iyz="4.33508550119327E-10"
-        izz="1.35313300236987E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_foot.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_foot.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_foot_y"
-    type="revolute">
-    <origin
-      xyz="-0.011743 -0.0752 -0.0098519"
-      rpy="2.949E-15 0 3.1416" />
-    <parent
-      link="l_ankle" />
-    <child
-      link="l_foot" />
-    <axis
-      xyz="-1 0 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_hip">
-    <inertial>
-      <origin
-        xyz="0.0267918410324552 0.0384453640375394 0.0237344523826482"
-        rpy="0 0 0" />
-      <mass
-        value="0.0247517363559943" />
-      <inertia
-        ixx="7.94295695056937E-06"
-        ixy="2.1425049431127E-06"
-        ixz="1.03734145559542E-06"
-        iyy="4.5972428305968E-06"
-        iyz="8.17998732601025E-07"
-        izz="8.74766806042519E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_hip.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_hip.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_hipy"
-    type="revolute">
-    <origin
-      xyz="0.041652 -0.0188 0.0037433"
-      rpy="1.5708 0 0" />
-    <parent
-      link="pelvis" />
-    <child
-      link="r_hip" />
-    <axis
-      xyz="0 -1 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_hip_motor">
-    <inertial>
-      <origin
-        xyz="-6.01409748823695E-05 -0.00776762181170464 -0.002813916096787"
-        rpy="0 0 0" />
-      <mass
-        value="0.0191896773969032" />
-      <inertia
-        ixx="2.72857317938081E-06"
-        ixy="-1.4137371516594E-08"
-        ixz="1.36917622383132E-09"
-        iyy="1.92531751945142E-06"
-        iyz="-8.27044796155275E-08"
-        izz="2.84890029696111E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_hip_motor.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_hip_motor.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_hip_motor_z"
-    type="revolute">
-    <origin
-      xyz="0.032 0.053 0"
-      rpy="0 0 0" />
-    <parent
-      link="r_hip" />
-    <child
-      link="r_hip_motor" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_thigh">
-    <inertial>
-      <origin
-        xyz="-8.92758074411137E-09 -0.0335554544923856 -5.6177624304668E-05"
-        rpy="0 0 0" />
-      <mass
-        value="0.0205479194607194" />
-      <inertia
-        ixx="5.39136068968387E-06"
-        ixy="-2.47620919930406E-12"
-        ixz="-1.88429697740208E-11"
-        iyy="2.40527919108636E-06"
-        iyz="1.8376653842978E-08"
-        izz="4.40731135554231E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_thigh.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_thigh.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_thigh_x"
-    type="revolute">
-    <origin
-      xyz="0 0 -0.004"
-      rpy="1.5708 0 1.5708" />
-    <parent
-      link="r_hip_motor" />
-    <child
-      link="r_thigh" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_knee">
-    <inertial>
-      <origin
-        xyz="-1.07041472907632E-10 -0.0215 -4.30211422042248E-16"
-        rpy="0 0 0" />
-      <mass
-        value="0.00513087567995405" />
-      <inertia
-        ixx="2.59601739840765E-06"
-        ixy="-1.79603285176735E-19"
-        ixz="3.78025557364667E-22"
-        iyy="1.53262832182676E-06"
-        iyz="-1.19633900582379E-21"
-        izz="1.34541992010939E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_knee.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_knee.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_knee_x"
-    type="revolute">
-    <origin
-      xyz="0 -0.046 0"
-      rpy="1.3878E-15 1.3878E-15 1.3482E-29" />
-    <parent
-      link="r_thigh" />
-    <child
-      link="r_knee" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_ankle">
-    <inertial>
-      <origin
-        xyz="0.0124831744421377 0.00877126170544443 -0.000110062280338552"
-        rpy="0 0 0" />
-      <mass
-        value="0.0401544687611881" />
-      <inertia
-        ixx="6.22341129865557E-06"
-        ixy="1.13806252097998E-07"
-        ixz="-3.62955227736143E-08"
-        iyy="1.1354072686787E-05"
-        iyz="2.17409044982821E-08"
-        izz="1.39792054648314E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_ankle.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_ankle.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_ankle_x"
-    type="revolute">
-    <origin
-      xyz="0 -0.044 0"
-      rpy="-3.1416 1.3878E-15 3.1416" />
-    <parent
-      link="r_knee" />
-    <child
-      link="r_ankle" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_foot">
-    <inertial>
-      <origin
-        xyz="-0.0064233398899067 0.0209235049680567 -0.000166683204729512"
-        rpy="0 0 0" />
-      <mass
-        value="0.0202605378538181" />
-      <inertia
-        ixx="3.14268429568432E-06"
-        ixy="3.92584853219291E-07"
-        ixz="-3.79765019772836E-09"
-        iyy="1.48123918460857E-05"
-        iyz="4.33508550049995E-10"
-        izz="1.35313300236987E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_foot.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_foot.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_foot_y"
-    type="revolute">
-    <origin
-      xyz="0 0 0"
-      rpy="1.3878E-15 8.3267E-15 3.1416" />
-    <parent
-      link="r_ankle" />
-    <child
-      link="r_foot" />
-    <axis
-      xyz="-1 0 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="spine">
-    <inertial>
-      <origin
-        xyz="-4.65615183525142E-05 0.0147514539929461 0.00718045861279515"
-        rpy="0 0 0" />
-      <mass
-        value="0.0236192598262425" />
-      <inertia
-        ixx="4.6219502193066E-06"
-        ixy="-2.73150212279027E-10"
-        ixz="1.46262150824344E-08"
-        iyy="4.35953212647662E-06"
-        iyz="-3.88438024562158E-08"
-        izz="2.68864078262981E-06" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/spine.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/spine.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="spine_z"
-    type="revolute">
-    <origin
-      xyz="0.041652 -0.0728 0.058743"
-      rpy="3.1416 -0.0024405 1.4944E-19" />
-    <parent
-      link="pelvis" />
-    <child
-      link="spine" />
-    <axis
-      xyz="0 -1 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="chest">
-    <inertial>
-      <origin
-        xyz="0.000183348580937451 -0.00916720574845425 0.0555164070303117"
-        rpy="0 0 0" />
-      <mass
-        value="0.0820076699949507" />
-      <inertia
-        ixx="2.88159067118394E-05"
-        ixy="2.53748284530203E-08"
-        ixz="-6.88081947417912E-09"
-        iyy="6.22840837400982E-05"
-        iyz="-2.32465297125178E-06"
-        izz="5.37296720984047E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/chest.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/chest.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="chest_x"
-    type="revolute">
-    <origin
-      xyz="0 0.015 0"
-      rpy="-1.5449 -8.1098E-17 -2.0871E-18" />
-    <parent
-      link="spine" />
-    <child
-      link="chest" />
-    <axis
-      xyz="-1 0 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_shoulder">
-    <inertial>
-      <origin
-        xyz="0.00747429700267365 2.07618200409598E-10 -1.20106216638938E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.0033436832656123" />
-      <inertia
-        ixx="7.5528412026402E-07"
-        ixy="2.87386851917981E-15"
-        ixz="-2.85239094620316E-16"
-        iyy="8.36222428966545E-07"
-        iyz="-1.67477794487946E-16"
-        izz="2.71213451164774E-07" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_shoulder_x"
-    type="revolute">
-    <origin
-      xyz="-0.043511 -0.00015034 0.061"
-      rpy="1.5967 1.7916E-17 3.1416" />
-    <parent
-      link="chest" />
-    <child
-      link="l_shoulder" />
-    <axis
-      xyz="1 0 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_shoulder_motor">
-    <inertial>
-      <origin
-        xyz="-1.43009809550065E-09 -0.0228587980714255 -0.00326185201937972"
-        rpy="0 0 0" />
-      <mass
-        value="0.0337180938758863" />
-      <inertia
-        ixx="1.38412287733882E-05"
-        ixy="-6.40563008776547E-14"
-        ixz="-5.51999028364473E-13"
-        iyy="3.9227903886426E-06"
-        iyz="1.82027608343754E-06"
-        izz="1.23611994526237E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder_motor.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_shoulder_motor.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_shoulder_motor_y"
-    type="revolute">
-    <origin
-      xyz="0.018089 0 0"
-      rpy="0 0 0" />
-    <parent
-      link="l_shoulder" />
-    <child
-      link="l_shoulder_motor" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_upper_arm">
-    <inertial>
-      <origin
-        xyz="0.00738572094736649 -2.07924927275727E-10 1.10631503957848E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.00334368326578746" />
-      <inertia
-        ixx="7.55284120272145E-07"
-        ixy="-2.87671849201633E-15"
-        ixz="3.8678375267221E-16"
-        iyy="8.36222428969736E-07"
-        iyz="-2.53581723059435E-16"
-        izz="2.7121345117354E-07" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_upper_arm.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_upper_arm.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_upper_arm_z"
-    type="revolute">
-    <origin
-      xyz="0 -0.054 0"
-      rpy="-3.1392 0 -1.5708" />
-    <parent
-      link="l_shoulder_motor" />
-    <child
-      link="l_upper_arm" />
-    <axis
-      xyz="1 0 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="l_forearm">
-    <inertial>
-      <origin
-        xyz="0.00276318257492493 -0.0198338270203623 0.000214866068286079"
-        rpy="0 0 0" />
-      <mass
-        value="0.0257657351354794" />
-      <inertia
-        ixx="1.28753735465766E-05"
-        ixy="-2.09824525987835E-06"
-        ixz="-4.15371891487352E-08"
-        iyy="2.70910011838058E-06"
-        iyz="-4.05301232336156E-08"
-        izz="1.28181627224906E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_forearm.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/l_forearm.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="l_forearm_y"
-    type="revolute">
-    <origin
-      xyz="0.018 0 0"
-      rpy="3.1416 0 -1.5708" />
-    <parent
-      link="l_upper_arm" />
-    <child
-      link="l_forearm" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_shoulder">
-    <inertial>
-      <origin
-        xyz="0.00747429708048673 2.07622058434609E-10 -1.3148135358243E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.00334368326561428" />
-      <inertia
-        ixx="7.55284120264198E-07"
-        ixy="2.87394539042304E-15"
-        ixz="-2.89768892301985E-16"
-        iyy="8.36222428966727E-07"
-        iyz="-2.93904918504133E-16"
-        izz="2.71213451164959E-07" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_shoulder_x"
-    type="revolute">
-    <origin
-      xyz="0.043911 -0.00015034 0.061"
-      rpy="-1.5967 5.5447E-11 2.1434E-09" />
-    <parent
-      link="chest" />
-    <child
-      link="r_shoulder" />
-    <axis
-      xyz="-1 0 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_shoulder_motor">
-    <inertial>
-      <origin
-        xyz="-1.43254658135916E-09 -0.0228587980559559 -0.00326185202685698"
-        rpy="0 0 0" />
-      <mass
-        value="0.03371809385647" />
-      <inertia
-        ixx="1.3841228759395E-05"
-        ixy="-6.24406553282672E-14"
-        ixz="-5.52211679949731E-13"
-        iyy="3.92279038814914E-06"
-        iyz="1.82027608763323E-06"
-        izz="1.23611994388016E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder_motor.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_shoulder_motor.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_shoulder_motor_y"
-    type="revolute">
-    <origin
-      xyz="0.018089 0 0"
-      rpy="0 0 3.1416" />
-    <parent
-      link="r_shoulder" />
-    <child
-      link="r_shoulder_motor" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_upper_arm">
-    <inertial>
-      <origin
-        xyz="0.00738572094663152 -2.07617020797635E-10 1.25633947689607E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.00334368326578746" />
-      <inertia
-        ixx="7.55284120272143E-07"
-        ixy="-2.8733443759537E-15"
-        ixz="2.88457944900469E-16"
-        iyy="8.36222428969735E-07"
-        iyz="-2.87790509782189E-16"
-        izz="2.71213451173539E-07" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_upper_arm.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 1 1 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_upper_arm.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_upper_arm_z"
-    type="revolute">
-    <origin
-      xyz="0 -0.054 0"
-      rpy="-3.1392 0 -1.5708" />
-    <parent
-      link="r_shoulder_motor" />
-    <child
-      link="r_upper_arm" />
-    <axis
-      xyz="1 0 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="r_forearm">
-    <inertial>
-      <origin
-        xyz="-0.00276320533357348 -0.0198339003455293 0.000214694395096235"
-        rpy="0 0 0" />
-      <mass
-        value="0.0257657889801188" />
-      <inertia
-        ixx="1.28754577391755E-05"
-        ixy="2.09826471210378E-06"
-        ixz="4.15636504905912E-08"
-        iyy="2.7091088250933E-06"
-        iyz="-4.03467502126813E-08"
-        izz="1.28182439095505E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_forearm.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/r_forearm.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="r_forearm_y"
-    type="revolute">
-    <origin
-      xyz="0.018 0 0"
-      rpy="3.1416 0 -1.5708" />
-    <parent
-      link="r_upper_arm" />
-    <child
-      link="r_forearm" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
-  <link
-    name="head">
-    <inertial>
-      <origin
-        xyz="-2.75806401969086E-06 0.0382669007520599 0.00655498281252923"
-        rpy="0 0 0" />
-      <mass
-        value="0.0234153106720677" />
-      <inertia
-        ixx="1.94365398894925E-05"
-        ixy="-5.90366508087418E-10"
-        ixz="9.06544728958002E-11"
-        iyy="1.81703559426411E-05"
-        iyz="1.67170896371806E-06"
-        izz="1.80994307038823E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/head.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://Heol_humanoid/meshes/head.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="head_z"
-    type="revolute">
-    <origin
-      xyz="0.0002 -0.00015034 0.076045"
-      rpy="1.5708 4.9504E-11 -0.0025045" />
-    <parent
-      link="chest" />
-    <child
-      link="head" />
-    <axis
-      xyz="0 -1 0" />
-    <limit
-      lower="-2.6"
-      upper="2.6"
-      effort="0"
-      velocity="0" />
-  </joint>
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="Heol_humanoid">
+	<link name="pelvis">
+		<inertial>
+			<origin xyz="0.0410669745819321 0.0421828125034158 0.0379110717402652" rpy="0 0 0"></origin>
+			<mass value="0.0572942260553945"></mass>
+			<inertia ixx="3.65121025707978E-05" ixy="4.85882286230639E-07" ixz="-2.99007836945976E-07" iyy="2.000430429396E-05" iyz="3.35587468839815E-06" izz="2.12489482613664E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/pelvis_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/pelvis_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_hip">
+		<inertial>
+			<origin xyz="-0.0270835640140283 0.0231158477663268 0.0237291455019634" rpy="0 0 0"></origin>
+			<mass value="0.0238887563110607"></mass>
+			<inertia ixx="5.49518226158328E-06" ixy="6.82907038074933E-07" ixz="-1.00493628454709E-06" iyy="4.44318183140713E-06" iyz="-4.3109955469561E-07" izz="6.27728430763791E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_hip_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_hip_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_hip_motor">
+		<inertial>
+			<origin xyz="-6.01409748791082E-05 -0.00776762181170505 -0.00281391609679076" rpy="0 0 0"></origin>
+			<mass value="0.0191896773969032"></mass>
+			<inertia ixx="2.72857317938081E-06" ixy="-1.41373715165933E-08" ixz="1.36917622383191E-09" iyy="1.92531751945142E-06" iyz="-8.27044796155283E-08" izz="2.84890029696111E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_hip_motor_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_hip_motor_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_thigh">
+		<inertial>
+			<origin xyz="-1.10293058644406E-08 -0.0335554626566368 -5.61829485263877E-05" rpy="0 0 0"></origin>
+			<mass value="0.0205479105964943"></mass>
+			<inertia ixx="5.3913560500342E-06" ixy="-3.27768647326821E-12" ixz="-1.94132341304228E-11" iyy="2.40527757418774E-06" iyz="1.83746316311177E-08" izz="4.40730797669897E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_thigh_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_thigh_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_knee">
+		<inertial>
+			<origin xyz="-1.07050902864447E-10 0.0225000000000239 6.78970768497322E-15" rpy="0 0 0"></origin>
+			<mass value="0.00513087567995406"></mass>
+			<inertia ixx="2.59601739840765E-06" ixy="2.7189963744047E-19" ixz="-2.2454238776038E-19" iyy="1.53262832182676E-06" iyz="-1.85645753405888E-21" izz="1.34541992010939E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_knee_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_knee_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_ankle">
+		<inertial>
+			<origin xyz="-0.0442601678709415 -0.0664285222637494 -0.00976191413290354" rpy="0 0 0"></origin>
+			<mass value="0.040154468761188"></mass>
+			<inertia ixx="6.22341129865556E-06" ixy="1.13806252097566E-07" ixz="-3.62955227750007E-08" iyy="1.1354072686787E-05" iyz="2.17409044982703E-08" izz="1.39792054648314E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_ankle_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_ankle_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_foot">
+		<inertial>
+			<origin xyz="0.0385766601101179 0.0209235049680227 3.3316795277601E-05" rpy="0 0 0"></origin>
+			<mass value="0.0202605378538181"></mass>
+			<inertia ixx="3.14268429568421E-06" ixy="3.92584853218249E-07" ixz="-3.79765019585808E-09" iyy="1.48123918460857E-05" iyz="4.33508550119327E-10" izz="1.35313300236987E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_foot_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_foot_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_hip">
+		<inertial>
+			<origin xyz="0.0267918410324552 0.0384453640375394 0.0237344523826482" rpy="0 0 0"></origin>
+			<mass value="0.0247517363559943"></mass>
+			<inertia ixx="7.94295695056937E-06" ixy="2.1425049431127E-06" ixz="1.03734145559542E-06" iyy="4.5972428305968E-06" iyz="8.17998732601025E-07" izz="8.74766806042519E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_hip_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_hip_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_hip_motor">
+		<inertial>
+			<origin xyz="-6.01409748823695E-05 -0.00776762181170464 -0.002813916096787" rpy="0 0 0"></origin>
+			<mass value="0.0191896773969032"></mass>
+			<inertia ixx="2.72857317938081E-06" ixy="-1.4137371516594E-08" ixz="1.36917622383132E-09" iyy="1.92531751945142E-06" iyz="-8.27044796155275E-08" izz="2.84890029696111E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_hip_motor_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_hip_motor_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_thigh">
+		<inertial>
+			<origin xyz="-8.92758074411137E-09 -0.0335554544923856 -5.6177624304668E-05" rpy="0 0 0"></origin>
+			<mass value="0.0205479194607194"></mass>
+			<inertia ixx="5.39136068968387E-06" ixy="-2.47620919930406E-12" ixz="-1.88429697740208E-11" iyy="2.40527919108636E-06" iyz="1.8376653842978E-08" izz="4.40731135554231E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_thigh_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_thigh_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_knee">
+		<inertial>
+			<origin xyz="-1.07041472907632E-10 -0.0215 -4.30211422042248E-16" rpy="0 0 0"></origin>
+			<mass value="0.00513087567995405"></mass>
+			<inertia ixx="2.59601739840765E-06" ixy="-1.79603285176735E-19" ixz="3.78025557364667E-22" iyy="1.53262832182676E-06" iyz="-1.19633900582379E-21" izz="1.34541992010939E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_knee_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_knee_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_ankle">
+		<inertial>
+			<origin xyz="0.0124831744421377 0.00877126170544443 -0.000110062280338552" rpy="0 0 0"></origin>
+			<mass value="0.0401544687611881"></mass>
+			<inertia ixx="6.22341129865557E-06" ixy="1.13806252097998E-07" ixz="-3.62955227736143E-08" iyy="1.1354072686787E-05" iyz="2.17409044982821E-08" izz="1.39792054648314E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_ankle_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_ankle_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_foot">
+		<inertial>
+			<origin xyz="-0.0064233398899067 0.0209235049680567 -0.000166683204729512" rpy="0 0 0"></origin>
+			<mass value="0.0202605378538181"></mass>
+			<inertia ixx="3.14268429568432E-06" ixy="3.92584853219291E-07" ixz="-3.79765019772836E-09" iyy="1.48123918460857E-05" iyz="4.33508550049995E-10" izz="1.35313300236987E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_foot_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_foot_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="spine">
+		<inertial>
+			<origin xyz="-4.65615183525142E-05 0.0147514539929461 0.00718045861279515" rpy="0 0 0"></origin>
+			<mass value="0.0236192598262425"></mass>
+			<inertia ixx="4.6219502193066E-06" ixy="-2.73150212279027E-10" ixz="1.46262150824344E-08" iyy="4.35953212647662E-06" iyz="-3.88438024562158E-08" izz="2.68864078262981E-06"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/spine_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/spine_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="chest">
+		<inertial>
+			<origin xyz="0.000183348580937451 -0.00916720574845425 0.0555164070303117" rpy="0 0 0"></origin>
+			<mass value="0.0820076699949507"></mass>
+			<inertia ixx="2.88159067118394E-05" ixy="2.53748284530203E-08" ixz="-6.88081947417912E-09" iyy="6.22840837400982E-05" iyz="-2.32465297125178E-06" izz="5.37296720984047E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/chest_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/chest_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_shoulder">
+		<inertial>
+			<origin xyz="0.00747429700267365 2.07618200409598E-10 -1.20106216638938E-11" rpy="0 0 0"></origin>
+			<mass value="0.0033436832656123"></mass>
+			<inertia ixx="7.5528412026402E-07" ixy="2.87386851917981E-15" ixz="-2.85239094620316E-16" iyy="8.36222428966545E-07" iyz="-1.67477794487946E-16" izz="2.71213451164774E-07"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_shoulder_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_shoulder_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_shoulder_motor">
+		<inertial>
+			<origin xyz="-1.43009809550065E-09 -0.0228587980714255 -0.00326185201937972" rpy="0 0 0"></origin>
+			<mass value="0.0337180938758863"></mass>
+			<inertia ixx="1.38412287733882E-05" ixy="-6.40563008776547E-14" ixz="-5.51999028364473E-13" iyy="3.9227903886426E-06" iyz="1.82027608343754E-06" izz="1.23611994526237E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_shoulder_motor_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_shoulder_motor_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_upper_arm">
+		<inertial>
+			<origin xyz="0.00738572094736649 -2.07924927275727E-10 1.10631503957848E-11" rpy="0 0 0"></origin>
+			<mass value="0.00334368326578746"></mass>
+			<inertia ixx="7.55284120272145E-07" ixy="-2.87671849201633E-15" ixz="3.8678375267221E-16" iyy="8.36222428969736E-07" iyz="-2.53581723059435E-16" izz="2.7121345117354E-07"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_upper_arm_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_upper_arm_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="l_forearm">
+		<inertial>
+			<origin xyz="0.00276318257492493 -0.0198338270203623 0.000214866068286079" rpy="0 0 0"></origin>
+			<mass value="0.0257657351354794"></mass>
+			<inertia ixx="1.28753735465766E-05" ixy="-2.09824525987835E-06" ixz="-4.15371891487352E-08" iyy="2.70910011838058E-06" iyz="-4.05301232336156E-08" izz="1.28181627224906E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_forearm_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/l_forearm_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_shoulder">
+		<inertial>
+			<origin xyz="0.00747429708048673 2.07622058434609E-10 -1.3148135358243E-11" rpy="0 0 0"></origin>
+			<mass value="0.00334368326561428"></mass>
+			<inertia ixx="7.55284120264198E-07" ixy="2.87394539042304E-15" ixz="-2.89768892301985E-16" iyy="8.36222428966727E-07" iyz="-2.93904918504133E-16" izz="2.71213451164959E-07"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_shoulder_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_shoulder_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_shoulder_motor">
+		<inertial>
+			<origin xyz="-1.43254658135916E-09 -0.0228587980559559 -0.00326185202685698" rpy="0 0 0"></origin>
+			<mass value="0.03371809385647"></mass>
+			<inertia ixx="1.3841228759395E-05" ixy="-6.24406553282672E-14" ixz="-5.52211679949731E-13" iyy="3.92279038814914E-06" iyz="1.82027608763323E-06" izz="1.23611994388016E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_shoulder_motor_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_shoulder_motor_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_upper_arm">
+		<inertial>
+			<origin xyz="0.00738572094663152 -2.07617020797635E-10 1.25633947689607E-11" rpy="0 0 0"></origin>
+			<mass value="0.00334368326578746"></mass>
+			<inertia ixx="7.55284120272143E-07" ixy="-2.8733443759537E-15" ixz="2.88457944900469E-16" iyy="8.36222428969735E-07" iyz="-2.87790509782189E-16" izz="2.71213451173539E-07"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_upper_arm_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_upper_arm_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="r_forearm">
+		<inertial>
+			<origin xyz="-0.00276320533357348 -0.0198339003455293 0.000214694395096235" rpy="0 0 0"></origin>
+			<mass value="0.0257657889801188"></mass>
+			<inertia ixx="1.28754577391755E-05" ixy="2.09826471210378E-06" ixz="4.15636504905912E-08" iyy="2.7091088250933E-06" iyz="-4.03467502126813E-08" izz="1.28182439095505E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_forearm_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/r_forearm_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<link name="head">
+		<inertial>
+			<origin xyz="-2.75806401969086E-06 0.0382669007520599 0.00655498281252923" rpy="0 0 0"></origin>
+			<mass value="0.0234153106720677"></mass>
+			<inertia ixx="1.94365398894925E-05" ixy="-5.90366508087418E-10" ixz="9.06544728958002E-11" iyy="1.81703559426411E-05" iyz="1.67170896371806E-06" izz="1.80994307038823E-05"></inertia>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/head_visual.STL"></mesh>
+			</geometry>
+			<material name="">
+				<color rgba="1 0.2 0.2 1.0"></color>
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<geometry>
+				<mesh filename="package://meshes/head_respondable.STL"></mesh>
+			</geometry>
+		</collision>
+	</link>
+	<joint name="l_hip_y" type="revolute">
+		<origin xyz="0.041652 -0.0188 0.026743" rpy="1.5708 0 0"></origin>
+		<parent link="pelvis"></parent>
+		<child link="l_hip"></child>
+		<axis xyz="0 -1 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_hip_motor_z" type="revolute">
+		<origin xyz="-0.032 0.03 0" rpy="0 0 0"></origin>
+		<parent link="l_hip"></parent>
+		<child link="l_hip_motor"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_thigh_x" type="revolute">
+		<origin xyz="0 0 -0.004" rpy="1.5708 0 1.5708"></origin>
+		<parent link="l_hip_motor"></parent>
+		<child link="l_thigh"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_knee_x" type="revolute">
+		<origin xyz="0 -0.045 0" rpy="-3.1416 0 0"></origin>
+		<parent link="l_thigh"></parent>
+		<child link="l_knee"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_ankle_x" type="revolute">
+		<origin xyz="-0.056743 -0.0302 0.0096519" rpy="3.4694E-16 0 3.1416"></origin>
+		<parent link="l_knee"></parent>
+		<child link="l_ankle"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_foot_y" type="revolute">
+		<origin xyz="-0.011743 -0.0752 -0.0098519" rpy="2.949E-15 0 3.1416"></origin>
+		<parent link="l_ankle"></parent>
+		<child link="l_foot"></child>
+		<axis xyz="-1 0 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_hip_y" type="revolute">
+		<origin xyz="0.041652 -0.0188 0.0037433" rpy="1.5708 0 0"></origin>
+		<parent link="pelvis"></parent>
+		<child link="r_hip"></child>
+		<axis xyz="0 -1 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_hip_motor_z" type="revolute">
+		<origin xyz="0.032 0.053 0" rpy="0 0 0"></origin>
+		<parent link="r_hip"></parent>
+		<child link="r_hip_motor"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_thigh_x" type="revolute">
+		<origin xyz="0 0 -0.004" rpy="1.5708 0 1.5708"></origin>
+		<parent link="r_hip_motor"></parent>
+		<child link="r_thigh"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_knee_x" type="revolute">
+		<origin xyz="0 -0.046 0" rpy="1.3878E-15 1.3878E-15 1.3482E-29"></origin>
+		<parent link="r_thigh"></parent>
+		<child link="r_knee"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_ankle_x" type="revolute">
+		<origin xyz="0 -0.044 0" rpy="-3.1416 1.3878E-15 3.1416"></origin>
+		<parent link="r_knee"></parent>
+		<child link="r_ankle"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_foot_y" type="revolute">
+		<origin xyz="0 0 0" rpy="1.3878E-15 8.3267E-15 3.1416"></origin>
+		<parent link="r_ankle"></parent>
+		<child link="r_foot"></child>
+		<axis xyz="-1 0 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="spine_z" type="revolute">
+		<origin xyz="0.041652 -0.0728 0.058743" rpy="3.1416 -0.0024405 1.4944E-19"></origin>
+		<parent link="pelvis"></parent>
+		<child link="spine"></child>
+		<axis xyz="0 -1 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="chest_x" type="revolute">
+		<origin xyz="0 0.015 0" rpy="-1.5449 -8.1098E-17 -2.0871E-18"></origin>
+		<parent link="spine"></parent>
+		<child link="chest"></child>
+		<axis xyz="-1 0 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_shoulder_x" type="revolute">
+		<origin xyz="-0.043511 -0.00015034 0.061" rpy="1.5967 1.7916E-17 3.1416"></origin>
+		<parent link="chest"></parent>
+		<child link="l_shoulder"></child>
+		<axis xyz="1 0 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_shoulder_motor_y" type="revolute">
+		<origin xyz="0.018089 0 0" rpy="0 0 0"></origin>
+		<parent link="l_shoulder"></parent>
+		<child link="l_shoulder_motor"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_upper_arm_z" type="revolute">
+		<origin xyz="0 -0.054 0" rpy="-3.1392 0 -1.5708"></origin>
+		<parent link="l_shoulder_motor"></parent>
+		<child link="l_upper_arm"></child>
+		<axis xyz="1 0 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="l_forearm_y" type="revolute">
+		<origin xyz="0.018 0 0" rpy="3.1416 0 -1.5708"></origin>
+		<parent link="l_upper_arm"></parent>
+		<child link="l_forearm"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_shoulder_x" type="revolute">
+		<origin xyz="0.043911 -0.00015034 0.061" rpy="-1.5967 5.5447E-11 2.1434E-09"></origin>
+		<parent link="chest"></parent>
+		<child link="r_shoulder"></child>
+		<axis xyz="-1 0 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_shoulder_motor_y" type="revolute">
+		<origin xyz="0.018089 0 0" rpy="0 0 3.1416"></origin>
+		<parent link="r_shoulder"></parent>
+		<child link="r_shoulder_motor"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_upper_arm_z" type="revolute">
+		<origin xyz="0 -0.054 0" rpy="-3.1392 0 -1.5708"></origin>
+		<parent link="r_shoulder_motor"></parent>
+		<child link="r_upper_arm"></child>
+		<axis xyz="1 0 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="r_forearm_y" type="revolute">
+		<origin xyz="0.018 0 0" rpy="3.1416 0 -1.5708"></origin>
+		<parent link="r_upper_arm"></parent>
+		<child link="r_forearm"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
+	<joint name="head_z" type="revolute">
+		<origin xyz="0.0002 -0.00015034 0.076045" rpy="1.5708 4.9504E-11 -0.0025045"></origin>
+		<parent link="chest"></parent>
+		<child link="head"></child>
+		<axis xyz="0 -1 0"></axis>
+		<limit lower="-2.61799387799" upper="2.61799387799" effort="0.39" velocity="11.9"></limit>
+	</joint>
 </robot>
