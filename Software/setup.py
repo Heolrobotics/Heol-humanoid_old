@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 
 import sys
+import re
 
 from setuptools import setup, find_packages
+
+def version():
+    with open('heol_humanoid/_version.py') as f:
+        return re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", f.read()).group(1)
 
 
 extra = {}
@@ -10,10 +15,10 @@ if sys.version_info >= (3,):
     extra['use_2to3'] = True
 
 setup(name='heol-humanoid',
-      version='0.2',
+      version=version(),
       packages=find_packages(),
 
-      install_requires=['pypot >= 2.8', 'poppy-creature'],
+      install_requires=['pypot >= 2.10', 'poppy-creature'],
 
       setup_requires=['setuptools_git >= 0.3', ],
 
@@ -22,10 +27,10 @@ setup(name='heol-humanoid',
 
       zip_safe=False,
 
-      author='Alexandre Le Fahler, Julien JEHL',
+      author='Alexandre Le Fahler, Julien Jehl',
       author_email='???',
       description=' Heol Software Library',
-      url='https://github.com/Fendiproject/Fendi-humanoid',
+      url='https://github.com/Heolrobotics/Heol-humanoid',
       license='GNU GENERAL PUBLIC LICENSE Version 3',
 
       **extra
