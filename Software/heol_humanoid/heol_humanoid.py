@@ -25,7 +25,7 @@ class HeolHumanoid(AbstractPoppyCreature):
     @classmethod
     def vrep_hack(cls, robot):
         # fix vrep orientation bug
-        wrong_motor = [robot.l_hip_motor_z, robot.l_thigh_x, robot.l_ankle_x, robot.r_hip_y, robot.r_hip_motor_z, robot.r_thigh_x, robot.r_ankle_x, robot.spine_z, robot.chest_x, robot.l_shoulder_x, robot.l_upper_arm_z, robot.r_shoulder_x, robot.r_upper_arm_z, robot.head_z,robot.r_shoulder_motor_y,robot.l_shoulder_motor_y]
+        wrong_motor = [robot.l_hip_motor_z, robot.l_thigh_x, robot.l_ankle_x, robot.r_hip_y, robot.r_hip_motor_z, robot.r_thigh_x, robot.r_ankle_x, robot.spine_z, robot.chest_x,  robot.r_shoulder_x, robot.head_z,robot.r_shoulder_motor_y,robot.l_shoulder_motor_y, robot.l_forearm_y, robot.r_forearm_y]
         
         for m in wrong_motor:
             m.direct = not m.direct
