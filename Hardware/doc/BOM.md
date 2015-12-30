@@ -11,6 +11,7 @@
 - 1x chest_down
 - 1x IMU_support
 - 1x pelvis spine
+- 1x backpack
 
 ### upper_limbs
 - 4x shoulder
@@ -27,6 +28,7 @@
 - 1x hip_left 
 - 4x leg 
 - 1x renfort
+- 2x equerre
 
 
 ## Electronics
